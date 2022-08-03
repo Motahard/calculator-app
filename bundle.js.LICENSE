@@ -1,0 +1,1154 @@
+/******/
+
+// webpackBootstrap
+
+// install a JSONP callback for chunk loading
+
+// The module cache
+
+// object to store loaded and loading chunks
+
+// undefined = chunk not loaded, null = chunk preloaded/prefetched
+
+// Promise = chunk loading, 0 = chunk loaded
+
+// The require function
+
+// Check if module is in cache
+
+// Create a new module (and put it into the cache)
+
+// Execute the module function
+
+// Return the exports of the module
+
+// Flag the module as loaded
+
+// This file contains only the entry chunk.
+
+// The chunk loading function for additional chunks
+
+// JSONP chunk loading for javascript
+
+// 0 means "already installed".
+
+// a Promise means "currently loading".
+
+// setup Promise in chunk cache
+
+// start chunk loading
+
+// script path function
+
+// create error before stack unwound to get useful stacktrace later
+
+// avoid mem leaks in IE.
+
+// expose the modules object (__webpack_modules__)
+
+// expose the module cache
+
+// define getter function for harmony exports
+
+// define __esModule on exports
+
+// create a fake namespace object
+
+// mode & 1: value is a module id, require it
+
+// mode & 2: merge all properties of value into the ns
+
+// mode & 4: return value when already ns object
+
+// mode & 8|1: behave like require
+
+// getDefaultExport function for compatibility with non-harmony modules
+
+// Object.prototype.hasOwnProperty.call
+
+// __webpack_public_path__
+
+// on error function for async loading
+
+// Load entry module and return exports
+
+/************************************************************************/
+
+/* 0 */
+
+/***/
+
+/* 1 */
+
+// By explicitly using `prop-types` you are opting into new production behavior.
+
+// http://fb.me/prop-types-in-prod
+
+/* 2 */
+
+/* WEBPACK VAR INJECTION */
+
+/* harmony export (binding) */
+
+/* unused harmony export css */
+
+/* unused harmony export isStyledComponent */
+
+/* unused harmony export keyframes */
+
+/* unused harmony export ServerStyleSheet */
+
+/* unused harmony export StyleSheetConsumer */
+
+/* unused harmony export StyleSheetContext */
+
+/* unused harmony export StyleSheetManager */
+
+/* unused harmony export ThemeConsumer */
+
+/* unused harmony export ThemeContext */
+
+/* unused harmony export withTheme */
+
+/* unused harmony export __DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS */
+
+/* harmony import */
+
+/*#__PURE__*/
+
+// 
+
+/**
+ * Create an error file out of errors.md for development and a simple web link to the full errors
+ * in production mode.
+ */
+
+// Definitely a string, and a clone
+
+// the first self-ref is always untouched
+
+// there should be at least two self-refs to do a replacement (.b > .b)
+
+// no consecutive self refs (.b.b); that is a precedence boost and treated differently
+
+// eslint-disable-next-line no-param-reassign
+
+// stylis has no concept of state to be passed to plugins
+
+// but since JS is single=threaded, we can rely on that to ensure
+
+// these properties stay in sync with the current stylis run
+
+/* eslint-disable camelcase, no-undef */
+
+// eslint-disable-next-line guard-for-in
+
+// $FlowFixMe
+
+/* Firefox quirk requires us to step through all stylesheets to find one owned by the given tag */
+
+/* we should always be able to find a tag */
+
+/* abort early if cssRule string is falsy */
+
+/* use insertRule and cap passed index with maxIndex (no of cssRules) */
+
+/* any error indicates an invalid rule */
+
+// eslint-disable-next-line react/no-danger
+
+/* Work around insertRule quirk in EdgeHTML */
+
+/* Append to target when no previous element was passed */
+
+/* Insert new style tag after the previous one */
+
+/* create new empty text node and replace the current one */
+
+/* @import rules are reordered to appear first */
+
+/* add up no of injected rules */
+
+/* These are helpers for the StyleTags to keep track of the injected
+ * rule names for each (component) ID that they're keeping track of.
+ * They're crucial for detecting whether a name has already been
+ * injected.
+ * (This excludes rehydrated names) */
+
+/* adds a new ID:name pairing to a names dictionary */
+
+/* in speedy mode we can keep a lot more rules in a sheet before a slowdown can be expected */
+
+/* a map from ids to tags */
+
+/* deferred rules for a given id */
+
+/* this is used for not reinjecting rules via hasNameForId() */
+
+/* when rules for an id are removed using remove() we have to ignore rehydratedNames for it */
+
+/* a list of tags belonging to this StyleSheet */
+
+/* a tag for import rules */
+
+/* current capacity until a new tag must be created */
+
+/* children (aka clones) of this StyleSheet inheriting all and future injections */
+
+/* rehydrate all SSR'd style tags */
+
+/* abort rehydration if no previous style tags were found */
+
+/* check if style tag is a streamed tag */
+
+/* retrieve all component names */
+
+/* add rehydrated name to sheet to avoid re-adding styles */
+
+/* extract all components and their CSS */
+
+/* store original HTMLStyleElement */
+
+/* abort rehydration if nothing was extracted */
+
+/* create a tag to be used for rehydration */
+
+/* add all extracted components to the new tag */
+
+/* remove old HTMLStyleElements, since they have been rehydrated */
+
+/* reset capacity and adjust MAX_SIZE by the initial size of the rehydration */
+
+/* retrieve all component ids */
+
+/* retrieve a "master" instance of StyleSheet which is typically used when no other is available
+   * The master StyleSheet is targeted by createGlobalStyle, keyframes, and components outside of any
+    * StyleSheetManager's context */
+
+/* reset the internal "master" instance */
+
+/* adds "children" to the StyleSheet that inherit all of the parents' rules
+   * while their own rules do not affect the parent */
+
+/* add to clone array */
+
+/* clone all tags */
+
+/* reconstruct tagMap */
+
+/* clone other maps */
+
+/* force StyleSheet to create a new tag on the next injection */
+
+/* get a tag for a given componentId, assign the componentId to one, or shard */
+
+/* simply return a tag, when the componentId was already assigned one */
+
+/* shard (create a new tag) if the tag is exhausted (See MAX_SIZE) */
+
+/* mainly for createGlobalStyle to check for its id */
+
+/* caching layer checking id+name to already have a corresponding tag and injected rules */
+
+/* exception for rehydrated names which are checked separately */
+
+/* registers a componentId and registers it on its tag */
+
+/* don't inject when the id is already registered */
+
+/* injects rules for a given id with a name that will need to be cached */
+
+/* add deferred rules for component */
+
+// Combine passed cssRules with previously deferred CSS rules
+
+// NOTE: We cannot mutate the deferred array itself as all clones
+
+// do the same (see clones[i].inject)
+
+/* removes all rules for a given id, which doesn't remove its marker but resets it */
+
+/* remove all rules from the tag */
+
+/* ignore possible rehydrated names */
+
+/* delete possible deferred rules */
+
+/* NOTE: This is just for backwards-compatibility with jest-styled-components */
+
+/**
+ * Hyphenates a camelcased CSS property name, for example:
+ *
+ *   > hyphenateStyleName('backgroundColor')
+ *   < "background-color"
+ *   > hyphenateStyleName('MozTransition')
+ *   < "-moz-transition"
+ *   > hyphenateStyleName('msTransition')
+ *   < "-ms-transition"
+ *
+ * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
+ * is converted to `-ms-`.
+ *
+ * @param {string} string
+ * @return {string}
+ */
+
+// Taken from https://github.com/facebook/react/blob/b87aabdfe1b7461e7331abb3601d9e6bb27544bc/packages/react-dom/src/shared/dangerousStyleValue.js
+
+/**
+ * It's falsish not falsy because 0 is allowed.
+ */
+
+// https://github.com/amilajack/eslint-plugin-flowtype-errors/issues/133
+
+/* Handle other components */
+
+/* Either execute or defer the function */
+
+/* Handle objects */
+
+// Source: https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
+
+/* eslint-disable no-bitwise */
+
+/* This is the "capacity" of our alphabet i.e. 2x26 for all letters plus their capitalised
+ * counterparts */
+
+/* start at 75 for 'a' until 'z' (25) and then start at 65 for capitalised letters */
+
+/* input a number, usually a hash and convert it to base-52 */
+
+/* get a char and divide by alphabet-length */
+
+// recursive case
+
+// functions are allowed to be static if they're just being
+
+// used to get the classname of a nested styled component
+
+// eslint-disable-next-line guard-for-in, no-restricted-syntax
+
+/* combines hashStr (murmurhash) and nameGenerator for convenience */
+
+/*
+   * Flattens a rule set into valid CSS
+   * Hashes it, wraps the whole chunk in a .hash1234 {}
+   * Returns the hash to be injected on render()
+   * */
+
+// Props should take precedence over ThemeProvider, which should take precedence over
+
+// defaultProps, but React automatically puts defaultProps on props.
+
+/* eslint-disable react/prop-types, flowtype-errors/show-errors */
+
+/* eslint-enable */
+
+/*
+ ComponentStyle is all the CSS-specific stuff, not
+ the React-specific stuff.
+ */
+
+/**
+ * TODO: Explore using CSS.escape when it becomes more available
+ * in evergreen browsers.
+ */
+
+// don't hoist over string (html) components
+
+// eslint-disable-next-line no-plusplus
+
+// Avoid failures from read-only properties
+
+/* fail silently */
+
+// Helper to call a given function, only once
+
+/**
+   * Get the theme from the props, supporting both (outerTheme) => {}
+   * as well as object notation
+   */
+
+/* The master sheet might be reset, so keep a reference here */
+
+/**
+   * Mark the ServerStyleSheet as being fully emitted and manually GC it from the
+   * StyleSheet singleton.
+   */
+
+/* Remove sealed StyleSheets from the master sheet */
+
+// No need to subscribe a static component to theme changes, it won't change anything
+
+// Don't pass through non HTML tags through to HTML elements
+
+/* eslint-disable guard-for-in */
+
+// statically styled-components don't need to build an execution context object,
+
+// and shouldn't be increasing the number of class names
+
+/* We depend on components having unique IDs */
+
+/**
+   * This ensures uniqueness if two components happen to share
+   * the same displayName.
+   */
+
+// fold the underlying StyledComponent rules up (implicit extend)
+
+// fold the underlying StyledComponent target up since we folded the styles
+
+// all SC-specific things should not be hoisted
+
+// Thanks to ReactDOMFactories for this handy list!
+
+/* This is callable directly as a template function */
+
+// $FlowFixMe: Not typed to avoid destructuring arguments
+
+/* If config methods are called, wrap up a new template function and merge options */
+
+/* Modify/inject new props at runtime */
+
+// Shorthands for all valid HTML Elements
+
+// SVG
+
+// TODO: overwrite in-place instead of remove+create?
+
+// place our cache into shared context so it'll persist between HMRs
+
+/**
+       * This fixes HMR compatibility. Don't ask me why, but this combination of
+       * caching the closure variables via statics and then persisting the statics in
+       * state works across HMR where no other combination did. ¯\_(ツ)_/¯
+       */
+
+/**
+       * Depending on the order "render" is called this can cause the styles to be lost
+       * until the next render pass of the remaining instance, which may
+       * not be immediate.
+       */
+
+//
+
+/* harmony default export */
+
+/* 3 */
+
+/* 4 */
+
+/* 5 */
+
+/* 6 */
+
+//# sourceMappingURL=stylis.min.js.map
+
+/* 7 */
+
+/* 8 */
+
+/* 9 */
+
+/**
+ * Expose `pathToRegexp`.
+ */
+
+/**
+ * Compile a string to a template function for the path.
+ *
+ * @param  {string}             str
+ * @param  {Object=}            options
+ * @return {!function(Object=, Object=)}
+ */
+
+/**
+ * Prettier encoding of URI path segments.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+
+/**
+ * The main path matching regexp utility.
+ *
+ * @type {RegExp}
+ */
+
+// Match escaped characters that would otherwise appear in future matches.
+
+// This allows the user to escape special characters that won't transform.
+
+// Match Express-style parameters and un-named parameters with a prefix
+
+// and optional suffixes. Matches appear as:
+
+// "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
+
+// "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+
+// "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
+
+/**
+ * Parse a string for the raw tokens.
+ *
+ * @param  {string}  str
+ * @param  {Object=} options
+ * @return {!Array}
+ */
+
+// Ignore already escaped sequences.
+
+// Push the current path onto the tokens.
+
+// Match any characters still remaining.
+
+// If the path exists, push it onto the end.
+
+/**
+ * Encode the asterisk parameter. Similar to `pretty`, but allows slashes.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+
+/**
+ * Expose a method for transforming tokens into the path function.
+ */
+
+// Compile all the patterns before compilation.
+
+// Compile all the tokens into regexps.
+
+// Prepend partial segment prefixes.
+
+/**
+ * Escape a regular expression string.
+ *
+ * @param  {string} str
+ * @return {string}
+ */
+
+/**
+ * Escape the capturing group by escaping special characters and meaning.
+ *
+ * @param  {string} group
+ * @return {string}
+ */
+
+/**
+ * Attach the keys as a property of the regexp.
+ *
+ * @param  {!RegExp} re
+ * @param  {Array}   keys
+ * @return {!RegExp}
+ */
+
+/**
+ * Get the flags for a regexp from the options.
+ *
+ * @param  {Object} options
+ * @return {string}
+ */
+
+/**
+ * Pull out keys from a regexp.
+ *
+ * @param  {!RegExp} path
+ * @param  {!Array}  keys
+ * @return {!RegExp}
+ */
+
+/**
+ * Expose a function for taking tokens and returning a RegExp.
+ *
+ * @param  {!Array}          tokens
+ * @param  {(Array|Object)=} keys
+ * @param  {Object=}         options
+ * @return {!RegExp}
+ */
+
+/** @type {!Object} */
+
+// Iterate over the tokens and create our regexp string.
+
+// In non-strict mode we allow a slash at the end of match. If the path to
+
+// match already ends with a slash, we remove it for consistency. The slash
+
+// is valid at the end of a path match, not in the middle. This is important
+
+// in non-ending mode, where "/test/" shouldn't match "/test//route".
+
+/**
+ * Normalize the given path string, returning a regular expression.
+ *
+ * An empty array can be passed in for the keys, which will hold the
+ * placeholder key descriptions. For example, using `/user/:id`, `keys` will
+ * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
+ *
+ * @param  {(string|RegExp|Array)} path
+ * @param  {(Array|Object)=}       keys
+ * @param  {Object=}               options
+ * @return {!RegExp}
+ */
+
+// Use a negative lookahead to match only capturing groups.
+
+/**
+ * Transform an array into a regexp.
+ *
+ * @param  {!Array}  path
+ * @param  {Array}   keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+
+/** @type {!Array} */
+
+/**
+ * Create a path regexp from string input.
+ *
+ * @param  {string}  path
+ * @param  {!Array}  keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+
+/** @type {string} */
+
+/* 10 */
+
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/* eslint-disable no-unused-vars */
+
+// Detect buggy property enumeration order in older V8 versions.
+
+// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+
+// eslint-disable-line no-new-wrappers
+
+// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+
+// We don't expect any of the above to throw, but better to be safe.
+
+/* 11 */
+
+/* 12 */
+
+/* 13 */
+
+/* 14 */
+
+/* 15 */
+
+/* 16 */
+
+// DCE check should happen before ReactDOM bundle executes so that
+
+// DevTools can report bad minification during injection.
+
+/* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+
+// Verify that the code above has been dead code eliminated (DCE'd).
+
+// DevTools shouldn't crash React, no matter what.
+
+// We should still report in case we break this code.
+
+/* 17 */
+
+/* 18 */
+
+// property
+
+// @import
+
+// selector
+
+// at-rule
+
+// @font-face, @page
+
+/* 19 */
+
+// SVG-related properties
+
+/* 20 */
+
+// @flow
+
+/* 21 */
+
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */
+
+/* 22 */
+
+/* 23 */
+
+// CONCATENATED MODULE: ./node_modules/@emotion/memoize/dist/memoize.browser.esm.js
+
+/* o */
+
+/* n */
+
+/* Z+1 */
+
+// CONCATENATED MODULE: ./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js
+
+/* 24 */
+
+// CONCATENATED MODULE: ./node_modules/is-what/dist/index.esm.js
+
+/**
+ * Returns the object type of the given payload
+ *
+ * @param {*} payload
+ * @returns {string}
+ */
+
+/**
+ * Returns whether the payload is undefined
+ *
+ * @param {*} payload
+ * @returns {payload is undefined}
+ */
+
+/**
+ * Returns whether the payload is a plain JavaScript object (excluding special classes or objects with other prototypes)
+ *
+ * @param {*} payload
+ * @returns {payload is {[key: string]: any}}
+ */
+
+/**
+ * Returns whether the payload is an array
+ *
+ * @param {*} payload
+ * @returns {payload is undefined}
+ */
+
+/**
+ * Returns whether the payload is a string
+ *
+ * @param {*} payload
+ * @returns {payload is string}
+ */
+
+/**
+ * Returns whether the payload is a Symbol
+ *
+ * @param {*} payload
+ * @returns {payload is symbol}
+ */
+
+/**
+ * Returns whether the payload is a primitive type (eg. Boolean | Null | Undefined | Number | String | Symbol)
+ *
+ * @param {*} payload
+ * @returns {(payload is boolean | null | undefined | number | string | symbol)}
+ */
+
+// CONCATENATED MODULE: ./node_modules/merge-anything/dist/index.esm.js
+
+/* unused harmony export merge */
+
+/* unused harmony export concatArrays */
+
+/**
+ * Merge anything recursively.
+ * Objects get merged, special objects (classes etc.) are re-assigned "as is".
+ * Basic types overwrite objects or other basic types.
+ *
+ * @param {(IConfig | any)} origin
+ * @param {...any[]} newComers
+ * @returns the result
+ */
+
+// work directly on newComer if its not an object
+
+// extend merge rules
+
+// define newObject to merge all values upon
+
+// @ts-ignore
+
+// re-define the origin and newComer as targetVal and newVal
+
+// When newVal is an object do the merge recursively
+
+/* 25 */
+
+/* 26 */
+
+/** @license React v16.11.0
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* 27 */
+
+/** @license React v16.11.0
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/*
+ Modernizr 3.0.0pre (Custom Build) | MIT
+*/
+
+/* 28 */
+
+/* 29 */
+
+/** @license React v0.17.0
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* 30 */
+
+/* 31 */
+
+/* 32 */
+
+/* 33 */
+
+/**
+   * @return {null}
+   */
+
+/* 34 */
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// Important!
+
+// Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+
+/* 35 */
+
+/* 36 */
+
+/* 37 */
+
+/* 38 */
+
+/* 39 */
+
+/* 40 */
+
+/* 41 */
+
+/* 42 */
+
+/* 43 */
+
+/* 44 */
+
+/* 45 */
+
+/* 46 */
+
+/* 47 */
+
+/* 48 */
+
+/* 49 */
+
+/* 50 */
+
+/* 51 */
+
+/* 52 */
+
+/* 53 */
+
+/* 54 */
+
+// shim for using process in browser
+
+// cached from whatever global is present so that test runners that stub it
+
+// don't break things.  But we need to wrap it in a try catch in case it is
+
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+
+// function because try/catches deoptimize in certain engines.
+
+//normal enviroments in sane situations
+
+// if setTimeout wasn't available but was latter defined
+
+// when when somebody has screwed with setTimeout but no I.E. maddness
+
+// When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+
+// same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+
+// if clearTimeout wasn't available but was latter defined
+
+// When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+
+// same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+
+// Some versions of I.E. have different rules for clearTimeout vs setTimeout
+
+// v8 likes predictible objects
+
+// empty string to avoid regexp issues
+
+/* 55 */
+
+/** @license React v16.11.0
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* 56 */
+
+// This works in non-strict mode
+
+// This works if eval is allowed (see CSP)
+
+// This works if the window reference is available
+
+// g can still be undefined, but nothing to do about it...
+
+// We return undefined, instead of nothing here, so it's
+
+// easier to handle this case. if(!global) { ...}
+
+/* 57 */
+
+/* 58 */
+
+/* 59 */
+
+/* 60 */
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+
+// CONCATENATED MODULE: ./node_modules/resolve-pathname/esm/resolve-pathname.js
+
+// About 1.5x faster than the two-arg version of Array#splice()
+
+// This implementation is based heavily on node's url.parse
+
+// to is absolute
+
+// to is relative, drop the filename
+
+// CONCATENATED MODULE: ./node_modules/value-equal/esm/value-equal.js
+
+// CONCATENATED MODULE: ./node_modules/tiny-invariant/dist/tiny-invariant.esm.js
+
+// CONCATENATED MODULE: ./node_modules/history/esm/history.js
+
+// Two-arg form: push(path, state)
+
+// One-arg form: push(location)
+
+// Resolve incomplete/relative pathname relative to current location.
+
+// When there is no prior location and pathname is empty, set it to /
+
+// TODO: If another transition starts while we're still confirming
+
+// the previous one, we may end up in a weird state. Figure out the
+
+// best way to handle this.
+
+// Return false from a transition hook to cancel the transition.
+
+// eslint-disable-line no-alert
+
+/**
+ * Returns true if the HTML5 history API is supported. Taken from Modernizr.
+ *
+ * https://github.com/Modernizr/Modernizr/blob/master/LICENSE
+ * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
+ * changed to avoid false negatives for Windows Phones: https://github.com/reactjs/react-router/issues/586
+ */
+
+// IE 11 sometimes throws when accessing window.history.state
+
+// See https://github.com/ReactTraining/history/pull/289
+
+/**
+ * Creates a history object that uses the HTML5 history API including
+ * pushState, replaceState, and the popstate event.
+ */
+
+// Ignore extraneous popstate events in WebKit.
+
+/**
+ * Returns true if a given popstate event is an extraneous WebKit event.
+ * Accounts for the fact that Chrome on iOS fires real popstate events
+ * containing undefined state when pressing the back button.
+ */
+
+// TODO: We could probably make this more reliable by
+
+// keeping a list of keys we've seen in sessionStorage.
+
+// Instead, we just default to 0 for keys we don't know.
+
+// Public interface
+
+// We can't use window.location.hash here because it's not
+
+// consistent across browsers - Firefox will pre-decode it!
+
+// Ensure we always have a properly-encoded hash.
+
+// A hashchange doesn't always == location change.
+
+// Ignore this change; we already setState in push/replace.
+
+// keeping a list of paths we've seen in sessionStorage.
+
+// Instead, we just default to 0 for paths we don't know.
+
+// Ensure the hash is encoded properly before doing anything else.
+
+// We cannot tell if a hashchange was caused by a PUSH, so we'd
+
+// rather setState here and ignore the hashchange. The caveat here
+
+// is that other hash histories in the page will consider it a POP.
+
+// We cannot tell if a hashchange was caused by a REPLACE, so we'd
+
+/**
+ * Creates a history object that stores locations in memory.
+ */
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inheritsLoose.js
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+
+// EXTERNAL MODULE: ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
+
+// This is a bit of a hack. We have to start listening for location
+
+// changes here in the constructor in case there are any <Redirect>s
+
+// on the initial render. If there are, they will replace/push when
+
+// they mount and since cDM fires in children before parents, we may
+
+// get a new location before the <Router> is mounted.
+
+/**
+ * The public API for a <Router> that stores location in memory.
+ */
+
+/**
+ * The public API for prompting the user before navigating away from a screen.
+ */
+
+/**
+ * Public API for matching a URL pathname to a path.
+ */
+
+// the path used to match
+
+// the matched portion of the URL
+
+// whether or not we matched exactly
+
+/**
+ * The public API for matching a single path and rendering.
+ */
+
+// Preact uses an empty array as children by
+
+// default, so use null if that's the case.
+
+/**
+ * The public top-level API for a "static" <Router>, so-called because it
+ * can't actually change the current location. Instead, it just records
+ * location changes in a context object. Useful mainly in testing and
+ * server-rendering scenarios.
+ */
+
+/**
+ * The public API for rendering the first <Route> that matches.
+ */
+
+// We use React.Children.forEach instead of React.Children.toArray().find()
+
+// here because toArray adds keys to all child elements and we do not want
+
+// to trigger an unmount/remount for two <Route>s that render the same
+
+// component at different URLs.
+
+//# sourceMappingURL=react-router.js.map
+
+// CONCATENATED MODULE: ./node_modules/react-router-dom/esm/react-router-dom.js
+
+/**
+ * The public API for a <Router> that uses HTML5 history.
+ */
+
+/**
+ * The public API for a <Router> that uses window.location.hash.
+ */
+
+// onClick prevented default
+
+// ignore everything but left clicks
+
+// React 15 compat
+
+/**
+ * The public API for rendering a history-aware <a>.
+ */
+
+/**
+ * A <Link> wrapper that knows if it's "active" or not.
+ */
+
+/* import() */
+
+// CONCATENATED MODULE: ./src/globalStyles.js
+
+// CONCATENATED MODULE: ./src/index.js
