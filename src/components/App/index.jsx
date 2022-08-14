@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from 'react'
+import React, { lazy, Suspense, useState, useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 
@@ -12,13 +12,17 @@ import { AppContainer } from './components'
 
 import { lightTheme, darkTheme, coloredTheme } from '@/theme'
 import { invertTheme } from '@/theme'
+import { getThemeLS, getHistoryLS } from '@/utils/index'
 
 const HomePage = lazy(() => import('@/pages/Home'))
 const SettingsPage = lazy(() => import('@/pages/Settings'))
 
 export default () => {
-  const [value, setValue] = useState('0');
-  const [result, setResult] = useState('');
+  const [value, setValue] = useState('');
+  const [expression, setExpression] = useState('');
+  const [result, setResult] = useState(0);
+  const [operator, setOperator] = useState('');
+
   const [history, setHistory] = useState([]);
   const [themeValue, setThemeValue] = useState('light');
 
@@ -36,6 +40,13 @@ export default () => {
     }
   }
 
+  useEffect(() => {
+    const theme = getThemeLS();
+    if (theme) setThemeValue(theme)
+    const history = JSON.parse(getHistoryLS());
+    if (history && history.length) setHistory(history)
+  }, [])
+
   return (
     <ThemeProvider theme={ handleTheme() }>
       <ErrorBoundary>
@@ -48,12 +59,16 @@ export default () => {
                 path={ HOME_PAGE_ROUTE }
               >
                 <HomePage
-                  expression={ value }
-                  setExpression={ setValue }
+                  expression={ expression }
+                  value={ value }
+                  setValue={ setValue }
+                  setExpression={ setExpression }
                   result={ result }
                   setResult={ setResult }
                   history={ history }
                   setHistory={ setHistory }
+                  operator={ operator }
+                  setOperator={ setOperator }
                 />
               </Route>
               <Route path={ SETTINGS_PAGE_ROUTE } >

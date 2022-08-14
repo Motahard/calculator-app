@@ -7,6 +7,9 @@ export const KeypadContainer = styled.div`
     padding: 1rem;
     border-top: 2px solid ${props => props.theme.secondaryBackColor};
     height: 100%;
+    & > input:last-of-type {
+        grid-column: 2 / -1;
+    }
     @media (max-width: 1000px) {
         & {
             gap: 1.5rem 2rem;

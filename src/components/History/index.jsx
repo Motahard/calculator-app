@@ -8,14 +8,14 @@ const History = ({ history, showHistory }) => {
     return (
         <HistoryContainer id='history'>
             <HistoryName>History</HistoryName>
-            { history.length > 0 && history.map((i, ind) => <HistoryElement key={ ind }>{ i }</HistoryElement>) }
+            { history.length > 0 && [...history].reverse().map((i, ind) => <HistoryElement key={ ind }>{ i }</HistoryElement>) }
         </HistoryContainer>
     )
 }
 
 History.propTypes = {
     history: PropTypes.array,
-    showHistory: PropTypes.func
+    showHistory: PropTypes.bool
 }
 
 export default History;

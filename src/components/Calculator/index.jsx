@@ -9,12 +9,12 @@ import ControlPanel from '@/components/ControlPanel'
 
 import { CalculatorContainer, KeypadDisplayContainer, HistoryControlContainer } from '@/components/Calculator/components'
 
-const Calculator = ({ expression, setExpression, result, setResult, history, setHistory }) => {
+const Calculator = ({ expression, setExpression, result, setResult, history, setHistory, value, setValue, operator, setOperator }) => {
     const [showHistory, setShowHistory] = useState(true);
     return (
         <CalculatorContainer>
             <KeypadDisplayContainer>
-                <Display expression={ expression } />
+                <Display result={ result } value={ value } operator={ operator } />
                 <Keypad
                     expression={ expression }
                     setExpression={ setExpression }
@@ -22,23 +22,34 @@ const Calculator = ({ expression, setExpression, result, setResult, history, set
                     setResult={ setResult }
                     history={ history }
                     setHistory={ setHistory }
+                    value={ value }
+                    setValue={ setValue }
+                    operator={ operator }
+                    setOperator={ setOperator }
                 />
-            </KeypadDisplayContainer>
-            <HistoryControlContainer>
-                <History history={ history } showHistory={ showHistory } />
                 <ControlPanel showHistory={ showHistory } setShowHistory={ setShowHistory } />
-            </HistoryControlContainer>
+            </KeypadDisplayContainer>
+            { showHistory ? (
+                <HistoryControlContainer>
+                    <History history={ history } showHistory={ showHistory } />
+                </HistoryControlContainer>
+            ) : null }
+
         </CalculatorContainer>
     )
 }
 
-Calculator.propTypes = {
-    expression: PropTypes.string,
-    setExpression: PropTypes.func,
-    result: PropTypes.string,
-    setResult: PropTypes.func,
-    histrory: PropTypes.array,
-    setHistory: PropTypes.func
-}
+// Calculator.propTypes = {
+//     expression: PropTypes.string,
+//     setExpression: PropTypes.func,
+//     result: PropTypes.number,
+//     setResult: PropTypes.func,
+//     history: PropTypes.array,
+//     setHistory: PropTypes.func,
+//     value: PropTypes.number,
+//     setValue: PropTypes.func,
+//     operator: PropTypes.string,
+//     setOperator: PropTypes.func
+// }
 
 export default Calculator;

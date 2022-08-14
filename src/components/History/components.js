@@ -4,7 +4,7 @@ export const HistoryContainer = styled.div`
     padding: 1rem;
     padding-top: 0;
     border-left: 2px solid ${props => props.theme.secondaryBackColor};
-    overflow-y: auto;
+    width: 200px;
 `
 
 export const HistoryName = styled.p`

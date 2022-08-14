@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Container, SettingsTitle, SettingTheme, SelectTheme, OptionTheme, ButtonClearHistory } from '@/pages/Settings/components';
+import { clearHistoryLS, setThemeLS } from '@/utils';
 
 class SettingsPage extends React.Component {
     constructor(props) {
@@ -12,9 +13,18 @@ class SettingsPage extends React.Component {
     }
 
     handleChange = (event) => {
-        this.setState({ themeValue: event.target.value },
-            this.props.changeThemeValue(event.target.value))
+        const { value } = event.target;
+        this.setState({ themeValue: value }, () => {
+            setThemeLS(value)
+            this.props.changeThemeValue(value)
+        })
     }
+
+    handleClearHistory = () => {
+        this.props.setHistory([]);
+        clearHistoryLS()
+    }
+
     render() {
         return (
             <Container>
@@ -28,7 +38,7 @@ class SettingsPage extends React.Component {
                     </SelectTheme>
                 </div>
                 <div>
-                    <ButtonClearHistory onClick={ () => this.props.setHistory([]) }>Clear All History</ButtonClearHistory>
+                    <ButtonClearHistory onClick={ this.handleClearHistory }>Clear All History</ButtonClearHistory>
                 </div>
             </Container>
         )

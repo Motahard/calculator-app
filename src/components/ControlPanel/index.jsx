@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types'
-import { ButtonSHHistory } from "./components";
+import { ButtonArrowRight, ButtonArrowLeft } from "./components";
 
 const ControlPanel = ({ showHistory, setShowHistory }) => {
     const handleClick = () => {
@@ -9,9 +9,7 @@ const ControlPanel = ({ showHistory, setShowHistory }) => {
 
     return (
         <div>
-            <ButtonSHHistory onClick={ handleClick }>
-                { showHistory ? 'Hide History' : 'Show History' }
-            </ButtonSHHistory>
+            { showHistory ? <ButtonArrowRight onClick={ handleClick } /> : <ButtonArrowLeft onClick={ handleClick } /> }
         </div>
     )
 }
