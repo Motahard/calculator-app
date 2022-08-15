@@ -36,11 +36,11 @@ const Keypad = ({
         if (val === '+/-') {
             if (expression) return;
             let numToggle = result;
-            result > 0 ?
+            +result > 0 ?
                 numToggle = -Math.abs(result)
                 :
                 numToggle = Math.abs(result)
-            setResult(numToggle);
+            setResult(numToggle.toString());
             return;
         }
         else if (val === '.') {
