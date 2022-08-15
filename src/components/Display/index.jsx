@@ -17,7 +17,9 @@ const Display = ({ value, result, operator }) => {
 }
 
 Display.propTypes = {
-
+    value: PropTypes.string,
+    result: PropTypes.string,
+    operator: PropTypes.string
 }
 
 export default Display;

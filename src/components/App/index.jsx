@@ -19,8 +19,8 @@ const SettingsPage = lazy(() => import('@/pages/Settings'))
 
 export default () => {
   const [value, setValue] = useState('');
-  const [expression, setExpression] = useState('');
-  const [result, setResult] = useState(0);
+  const [expression, setExpression] = useState(false);
+  const [result, setResult] = useState('0');
   const [operator, setOperator] = useState('');
 
   const [history, setHistory] = useState([]);

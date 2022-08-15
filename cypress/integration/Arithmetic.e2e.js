@@ -7,7 +7,7 @@ describe('Arithmetic', () => {
         cy.get('#1').should('have.value', '1').click();
         cy.get('#keypad > input').eq(10).should('have.value', '+').click();
         cy.get('#2').should('have.value', '2').click();
-        cy.get('#keypad > input').eq(14).should('have.value', '=').click();
+        cy.get('#keypad > input').eq(21).should('have.value', '=').click();
         cy.get('#display').should('have.text', '3');
         cy.get('#keypad > input').eq(19).should('have.value', 'CE').click();
     })
@@ -15,7 +15,7 @@ describe('Arithmetic', () => {
         cy.get('#1').should('have.value', '1').click();
         cy.get('#keypad > input').eq(5).should('have.value', '-').click();
         cy.get('#2').should('have.value', '2').click();
-        cy.get('#keypad > input').eq(14).should('have.value', '=').click();
+        cy.get('#keypad > input').eq(21).should('have.value', '=').click();
         cy.get('#display').should('have.text', '-1')
         cy.get('#keypad > input').eq(19).should('have.value', 'CE').click();
     })
@@ -23,7 +23,7 @@ describe('Arithmetic', () => {
         cy.get('#1').should('have.value', '1').click();
         cy.get('#keypad > input').eq(4).should('have.value', '*').click();
         cy.get('#2').should('have.value', '2').click();
-        cy.get('#keypad > input').eq(14).should('have.value', '=').click();
+        cy.get('#keypad > input').eq(21).should('have.value', '=').click();
         cy.get('#display').should('have.text', '2')
         cy.get('#keypad > input').eq(19).should('have.value', 'CE').click();
     })
@@ -31,7 +31,7 @@ describe('Arithmetic', () => {
         cy.get('#1').should('have.value', '1').click();
         cy.get('#keypad > input').eq(9).should('have.value', '/').click();
         cy.get('#2').should('have.value', '2').click();
-        cy.get('#keypad > input').eq(14).should('have.value', '=').click();
+        cy.get('#keypad > input').eq(21).should('have.value', '=').click();
         cy.get('#display').should('have.text', '0.5')
         cy.get('#keypad > input').eq(19).should('have.value', 'CE').click();
     })
@@ -45,7 +45,7 @@ describe('Arithmetic', () => {
         cy.get('#2').should('have.value', '2').click();
         cy.get('#keypad > input').eq(18).should('have.value', ')').click();
 
-        cy.get('#keypad > input').eq(14).should('have.value', '=').click();
+        cy.get('#keypad > input').eq(21).should('have.value', '=').click();
         cy.get('#display').should('have.text', '3')
         cy.get('#keypad > input').eq(19).should('have.value', 'CE').click();
     })

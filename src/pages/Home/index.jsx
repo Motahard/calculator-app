@@ -32,18 +32,18 @@ const HomePage = ({
   )
 }
 
-// HomePage.propTypes = {
-//   expression: PropTypes.string,
-//   setExpression: PropTypes.func,
-//   result: PropTypes.number,
-//   setResult: PropTypes.func,
-//   history: PropTypes.array,
-//   setHistory: PropTypes.func,
-//   value: PropTypes.number,
-//   setValue: PropTypes.func,
-//   operator: PropTypes.string,
-//   setOperator: PropTypes.func
-// }
+HomePage.propTypes = {
+  expression: PropTypes.bool,
+  setExpression: PropTypes.func,
+  result: PropTypes.string,
+  setResult: PropTypes.func,
+  history: PropTypes.array,
+  setHistory: PropTypes.func,
+  value: PropTypes.string,
+  setValue: PropTypes.func,
+  operator: PropTypes.string,
+  setOperator: PropTypes.func
+}
 
 
 export default HomePage;
