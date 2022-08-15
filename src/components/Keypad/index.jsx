@@ -113,6 +113,11 @@ const Keypad = ({
                 return;
             }
             if (!operator) return;
+            if (result === '0' && operator === '/') {
+                setResult('0');
+                alert('Cannot divide by zero')
+                return;
+            }
             calculateRes(value, result)
             const strHistory = value + operator + result;
 
